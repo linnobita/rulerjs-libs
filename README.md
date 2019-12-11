@@ -1,6 +1,6 @@
 # rulerjs-libs
 
-[![Travis](https://img.shields.io/travis/mingchuno/typescript-library-starter.svg)](https://travis-ci.org/mingchuno/typescript-library-starter) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Dev Dependencies](https://david-dm.org/mingchuno/typescript-library-starter/dev-status.svg)](https://david-dm.org/mingchuno/typescript-library-starter?type=dev) [![npm version](https://badge.fury.io/js/droppable.svg)](https://badge.fury.io/js/droppable)
+[![Travis](https://img.shields.io/travis/linnobita/rulerjs-libs.svg)](https://travis-ci.org/linnobita/rulerjs-libs) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Dev Dependencies](https://david-dm.org/linnobita/rulerjs-libs/dev-status.svg)](https://david-dm.org/linnobita/rulerjs-libs?type=dev) [![npm version](https://badge.fury.io/js/droppable.svg)](https://badge.fury.io/js/droppable)
 
 A typeScript library for [ruler.js](https://github.com/MrFrankel/ruler)
 
