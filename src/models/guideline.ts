@@ -33,7 +33,6 @@ export class GuideLine implements IGuideLine {
 
   public startMoving(ev: MouseEvent): void {
     addClasses(this.line, 'rulerjs_line_dragged')
-    ev = ev || (window.event as MouseEvent)
     const posX = ev ? ev.clientX : 0
     const posY = ev ? ev.clientY : 0
     const divTop = parseInt(this.line.style.top || '0', 10)
@@ -161,7 +160,7 @@ export class GuideLine implements IGuideLine {
 
   private assign(guideLine: Partial<IGuideLine> = {}): void {
     for (const key in guideLine) {
-      (this[key as keyof GuideLine] as any) = guideLine[key as keyof IGuideLine]
+      ;(this[key as keyof GuideLine] as any) = guideLine[key as keyof IGuideLine]
     }
   }
 }

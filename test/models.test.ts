@@ -18,26 +18,26 @@ describe('Options tests', () => {
 
 describe('Corner tests', () => {
   it('Corner is instantiable', () => {
-    expect(new MODELS.Corner(new MODELS.Options())).toBeInstanceOf(MODELS.Corner);
+    expect(new MODELS.Corner(new MODELS.Options())).toBeInstanceOf(MODELS.Corner)
   })
 
   it('Draw a corner', () => {
-    const container = document.createElement('div');
-    const corner = new MODELS.Corner(new MODELS.Options());
-    corner.drawCorner(container, CornerAlignment.LEFT_TOP);
+    const container = document.createElement('div')
+    const corner = new MODELS.Corner(new MODELS.Options())
+    corner.drawCorner(container, CornerAlignment.LEFT_TOP)
 
-    expect(container.children[0].classList.length).toEqual(2);
-    expect(container.children[0].classList[1]).toBe('ljl_rulerjs_corner_lt');
+    expect(container.children[0].classList.length).toEqual(2)
+    expect(container.children[0].classList[1]).toBe('rulerjs_corner_lt')
   })
 
   it('Remove a corner', () => {
-    const container = document.createElement('div');
-    const corner = new MODELS.Corner(new MODELS.Options());
-    corner.drawCorner(container, CornerAlignment.LEFT_TOP);
+    const container = document.createElement('div')
+    const corner = new MODELS.Corner(new MODELS.Options())
+    corner.drawCorner(container, CornerAlignment.LEFT_TOP)
 
-    corner.destroy();
+    corner.destroy()
 
-    expect(container.children.length).toEqual(0);
+    expect(container.children.length).toEqual(0)
   })
 })
 
@@ -49,117 +49,123 @@ describe('Ruler mark tests', () => {
     [RulerUnitType.MILLIMETERS, MODELS.RulerMark.TENTH_MARK_OFFSETS],
     [RulerUnitType.POINTS, MODELS.RulerMark.BASE_2_MARK_OFFSETS],
     [RulerUnitType.PICAS, MODELS.RulerMark.TENTH_MARK_OFFSETS],
-    [RulerUnitType.UNKNOWN, MODELS.RulerMark.TENTH_MARK_OFFSETS]
+    [RulerUnitType.UNKNOWN, MODELS.RulerMark.TENTH_MARK_OFFSETS],
   ])('Get offset of the mark in any unit', (setUnit, expected) => {
-    expect(MODELS.RulerMark.getMarkOffsetsByUnit(setUnit as RulerUnitType)).toBe(expected);
+    expect(MODELS.RulerMark.getMarkOffsetsByUnit(setUnit as RulerUnitType)).toBe(expected)
   })
 
   it('Get offset of the mark in any unit as string', () => {
-    expect(MODELS.RulerMark.getMarkOffsetsByUnit('INCHES')).toBe(MODELS.RulerMark.BASE_2_MARK_OFFSETS);
+    expect(MODELS.RulerMark.getMarkOffsetsByUnit('INCHES')).toBe(
+      MODELS.RulerMark.BASE_2_MARK_OFFSETS
+    )
   })
 })
 
 describe('Ruler tests', () => {
   it('Ruler is instantiable', () => {
-    expect(new MODELS.Ruler(new MODELS.Options())).toBeInstanceOf(MODELS.Ruler);
+    expect(new MODELS.Ruler(new MODELS.Options())).toBeInstanceOf(MODELS.Ruler)
   })
 
   it('Draw a ruler', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options());
-    ruler.drawRuler(500, 15);
-    expect(ruler.length).toBe(1000);
+    const ruler = new MODELS.Ruler(new MODELS.Options())
+    ruler.drawRuler(500, 15)
+    expect(ruler.length).toBe(1000)
   })
 
   it('Draw a ruler in vertical', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options(), { direction: RulerDirection.VERTICAL });
-    ruler.drawRuler(500, 15);
-    expect(ruler.length).toBe(1000);
+    const ruler = new MODELS.Ruler(new MODELS.Options(), { direction: RulerDirection.VERTICAL })
+    ruler.drawRuler(500, 15)
+    expect(ruler.length).toBe(1000)
   })
 
   it('Draw a ruler with custom mesuring target', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options({ measuringTarget: document.createElement('div') }));
-    ruler.drawRuler(500, 15);
-    expect(ruler.length).toBe(1000);
+    const ruler = new MODELS.Ruler(
+      new MODELS.Options({ measuringTarget: document.createElement('div') })
+    )
+    ruler.drawRuler(500, 15)
+    expect(ruler.length).toBe(1000)
   })
 
   it('Draw a ruler without tracker', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options({ enableMouseTracking: false }));
-    ruler.drawRuler(500, 15);
-    expect(ruler.length).toBe(1000);
+    const ruler = new MODELS.Ruler(new MODELS.Options({ enableMouseTracking: false }))
+    ruler.drawRuler(500, 15)
+    expect(ruler.length).toBe(1000)
   })
 
   it('Set unit to a ruler', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options());
-    ruler.drawRuler(500, 15);
-    ruler.setUnit(RulerUnitType.INCHES);
-    expect(ruler.unit.name).toBe(RulerUnitType.INCHES);
+    const ruler = new MODELS.Ruler(new MODELS.Options())
+    ruler.drawRuler(500, 15)
+    ruler.setUnit(RulerUnitType.INCHES)
+    expect(ruler.unit.name).toBe(RulerUnitType.INCHES)
   })
 
   it('Set scale of a ruler', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options());
-    ruler.drawRuler(500, 15);
-    ruler.setScale(2);
-    expect(ruler.scale).toBe(2);
+    const ruler = new MODELS.Ruler(new MODELS.Options())
+    ruler.drawRuler(500, 15)
+    ruler.setScale(2)
+    expect(ruler.scale).toBe(2)
   })
 
   it('Set color to a ruler', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options());
-    ruler.drawRuler(500, 15);
-    ruler.setColor('#008000');
-    expect(ruler.context.fillStyle).toBe('#008000');
+    const ruler = new MODELS.Ruler(new MODELS.Options())
+    ruler.drawRuler(500, 15)
+    ruler.setColor('#008000')
+    expect(ruler.context.fillStyle).toBe('#008000')
   })
 
   it('Set dpi to a ruler unit', () => {
-    const ruler = new MODELS.Ruler(new MODELS.Options());
-    ruler.drawRuler(500, 15);
-    ruler.setDPI(72);
-    expect(ruler.unit.dpi).toBe(72);
+    const ruler = new MODELS.Ruler(new MODELS.Options())
+    ruler.drawRuler(500, 15)
+    ruler.setDPI(72)
+    expect(ruler.unit.dpi).toBe(72)
   })
 })
 
 describe('Guideline tests', () => {
   it('Guideline is instantiable', () => {
-    expect(new MODELS.GuideLine(new MODELS.Options())).toBeInstanceOf(MODELS.GuideLine);
+    expect(new MODELS.GuideLine(new MODELS.Options())).toBeInstanceOf(MODELS.GuideLine)
   })
 
   it('Create a vertical guideline', () => {
-    const guideline = new MODELS.GuideLine(new MODELS.Options(), { direction: RulerDirection.VERTICAL });
-    expect(guideline.direction).toBe(RulerDirection.VERTICAL);
+    const guideline = new MODELS.GuideLine(new MODELS.Options(), {
+      direction: RulerDirection.VERTICAL,
+    })
+    expect(guideline.direction).toBe(RulerDirection.VERTICAL)
   })
 
   it('Start moving the guideline', () => {
-    const guideline = new MODELS.GuideLine(new MODELS.Options());
-    const mouseMove = new Event('mouseMove');
+    const guideline = new MODELS.GuideLine(new MODELS.Options())
+    const mouseMove = new Event('mouseMove')
 
-    guideline.line.dispatchEvent(mouseMove);
+    guideline.line.dispatchEvent(mouseMove)
 
-    guideline.startMoving(mouseMove as MouseEvent);
+    guideline.startMoving(mouseMove as MouseEvent)
 
-    expect(guideline.line.className.indexOf('ljl_rulerjs_line_dragged')).toBeGreaterThan(-1);
-    expect(guideline.line.className.indexOf('ljl_rulerjs_tooltip')).toBeGreaterThan(-1);
+    expect(guideline.line.className.indexOf('rulerjs_line_dragged')).toBeGreaterThan(-1)
+    expect(guideline.line.className.indexOf('rulerjs_tooltip')).toBeGreaterThan(-1)
   })
 
   it('Stop moving the guideline', () => {
-    const guideline = new MODELS.GuideLine(new MODELS.Options());
-    guideline.stopMoving();
+    const guideline = new MODELS.GuideLine(new MODELS.Options())
+    guideline.stopMoving()
 
-    expect(guideline.line.className.indexOf('ljl_rulerjs_line_dragged')).toBe(-1);
+    expect(guideline.line.className.indexOf('rulerjs_line_dragged')).toBe(-1)
   })
 
   it('Hide the guideline', () => {
-    const guideline = new MODELS.GuideLine(new MODELS.Options());
-    guideline.hide();
+    const guideline = new MODELS.GuideLine(new MODELS.Options())
+    guideline.hide()
 
-    expect(guideline.line.style.display).toBe('none');
+    expect(guideline.line.style.display).toBe('none')
   })
 
   it('Show the guideline', () => {
-    const guideline = new MODELS.GuideLine(new MODELS.Options());
-    guideline.show();
+    const guideline = new MODELS.GuideLine(new MODELS.Options())
+    guideline.show()
 
-    expect(guideline.line.style.display).toBe('block');
-    guideline.show('inline');
-    expect(guideline.line.style.display).toBe('inline');
+    expect(guideline.line.style.display).toBe('block')
+    guideline.show('inline')
+    expect(guideline.line.style.display).toBe('inline')
   })
 })
 

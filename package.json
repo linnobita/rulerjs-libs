@@ -78,7 +78,7 @@
       }
     },
     "collectCoverageFrom": [
-      "src/**/{!(guideline|ruler-libs),}.{js,ts}"
+      "src/**/{!(guideline|rulerjs-libs),}.{js,ts}"
     ]
   },
   "prettier": {
