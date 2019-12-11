@@ -93,3 +93,8 @@ lineWidth default: 1 // The line width for the context
 enableMouseTracking default: true // Is showing the mouse trackers
 enableTooltip default: true // Is showing the tooltip
 ```
+
+## Todo List
+
++ Set custom start point of the ruler other than (0, 0)
++ Show negative values when start point is not at (0, 0)
