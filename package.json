@@ -40,6 +40,9 @@
     "precommit": "lint-staged",
     "travis-deploy-once": "travis-deploy-once"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "lint-staged": {
     "{src,test}/**/*.ts": [
       "prettier --write",
