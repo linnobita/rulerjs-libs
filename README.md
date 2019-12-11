@@ -1,12 +1,12 @@
 # rulerjs-libs
 
-[![Travis](https://img.shields.io/travis/linnobita/rulerjs-libs.svg)](https://travis-ci.org/linnobita/rulerjs-libs) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Dev Dependencies](https://david-dm.org/linnobita/rulerjs-libs/dev-status.svg)](https://david-dm.org/linnobita/rulerjs-libs?type=dev) [![npm version](https://img.shields.io/npm/v/rulerjs-libs.svg)](https://www.npmjs.com/package/rulerjs-libs)
+[![Travis](https://img.shields.io/travis/linnobita/rulerjs-libs.svg)](https://travis-ci.org/linnobita/rulerjs-libs) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Dev Dependencies](https://david-dm.org/linnobita/rulerjs-libs/dev-status.svg)](https://david-dm.org/linnobita/rulerjs-libs?type=dev) [![npm version](https://img.shields.io/npm/v/rulerjs-libs.svg)](https://www.npmjs.com/package/rulerjs-libs) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 A typeScript library for [ruler.js](https://github.com/MrFrankel/ruler)
 
 ## Background
 
-`rulerjs-libs` is the typescript library for [ruler.js](https://github.com/MrFrankel/ruler) and designed for easily using in Angular porjects or Vue.js projects.
+`rulerjs-libs` is the typescript library for [ruler.js](https://github.com/MrFrankel/ruler) and designed for easily apply in Angular porjects or Vue.js projects.
 
 ## Installation
 
