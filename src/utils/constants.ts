@@ -1,0 +1,11 @@
+export const PICAS_PER_INCH = 6.0;
+export const POINTS_PER_INCH = 72.0;
+export const CENTIMETERS_PER_INCH = 2.54;
+export const MILLIMETERS_PER_INCH = CENTIMETERS_PER_INCH * 10;
+
+export const DEFAULT_INTERVAL_PT_STEP = 72;
+export const DEFAULT_INTERVAL_P_STEP = 6;
+export const DEFAULT_INTERVAL_PX_STEP = 100;
+export const DEFAULT_INTERVAL_IN_STEP = 1;
+export const DEFAULT_INTERVAL_CM_STEP = 1;
+export const DEFAULT_INTERVAL_MM_STEP = 10;

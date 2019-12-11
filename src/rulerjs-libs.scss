@@ -1,0 +1,159 @@
+.rulerjs_wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rulerjs_wrapper * {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+.rulerjs {
+  display: block;
+  position: absolute;
+  border: 1px solid rgba(206, 219, 236, .5);
+  pointer-events: all;
+  filter: blur(0);
+  -webkit-filter: blur(0);
+  z-index: 1000;
+  background-color: #fcfcfc;
+}
+
+.rulerjs_corner {
+  pointer-events: all;
+  position: absolute;
+  background-color: #fcfcfc;
+  z-index: 1010;
+  cursor: pointer;
+}
+
+.rulerjs_corner:hover {
+  background-color: lightgray;
+}
+
+.rulerjs_corner_lt {
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(206, 219, 236, .5);
+  border-right: 1px solid rgba(206, 219, 236, .5);
+}
+
+.rulerjs_corner_rt {
+  top: 1px;
+  right: 1px;
+  border-bottom: 1px solid rgba(206, 219, 236, .5);
+  border-left: 1px solid rgba(206, 219, 236, .5);
+}
+
+.rulerjs_corner_lb {
+  bottom: 1px;
+  left: 1px;
+  border-top: 1px solid rgba(206, 219, 236, .5);
+  border-right: 1px solid rgba(206, 219, 236, .5);
+}
+
+.rulerjs_corner_rb {
+  bottom: 1px;
+  right: 1px;
+  border-top: 1px solid rgba(206, 219, 236, .5);
+  border-left: 1px solid rgba(206, 219, 236, .5);
+}
+
+.rulerjs_ruler_Vertical {
+  cursor: ew-resize;
+  border-left: none;
+}
+
+.rulerjs_ruler_Horizontal {
+  cursor: ns-resize;
+  border-top: none;
+}
+
+.rulerjs_line {
+  position: absolute;
+  color: transparent;
+  background-color: transparent;
+  border-bottom: 1px solid #3BB7C7;
+  border-left: 1px solid #3BB7C7;
+  pointer-events: all;
+  z-index: 1000;
+}
+
+.rulerjs_line_dragged {
+  border: 1px dotted #6B7587;
+}
+
+.rulerjs_line:hover {
+  border-bottom: 1px solid #236E77;
+  border-left: 1px solid #236E77;
+}
+
+.rulerjs_lineVertical {
+  top: 0;
+  bottom: 0;
+}
+
+.rulerjs_lineVertical:hover {
+  cursor: ew-resize;
+}
+
+.rulerjs_lineHorizontal {
+  right: 0;
+  left: 0;
+}
+
+.rulerjs_lineHorizontal:hover {
+  cursor: ns-resize;
+}
+
+.rulerjs_tooltip:after {
+  background: #fcfcfc;
+  color: #333;
+  border: 1px solid gray;
+  font-size: 10px;
+  content: attr(data-tip);
+  top: 50%;
+  left: 50%;
+  margin-top: 1px;
+  margin-left: 1px;
+  padding: 2px 5px;
+  position: absolute;
+  z-index: 10005;
+  min-width: 45px;
+}
+
+.rulerjs_tracker {
+  height: 1px;
+  width: 1px;
+  background: #333;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10001;
+}
+
+.rulerjs_wrapper.dark-theme .rulerjs,
+.rulerjs_wrapper.dark-theme .rulerjs_corner {
+  background-color: #333;
+}
+
+.rulerjs_wrapper.dark-theme ~ .rulerjs_tracker {
+  background: #fcfcfc;
+}
+
+.rulerjs_wrapper.dark-theme .rulerjs_corner:hover {
+  background-color: rgb(139, 139, 139);
+}
+
+.rulerjs_wrapper.dark-theme .rulerjs_tooltip:after {
+  background: #333;
+  color: #fcfcfc;
+}
