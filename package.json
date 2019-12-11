@@ -1,6 +1,6 @@
 {
   "name": "rulerjs-libs",
-  "version": "0.2.1",
+  "version": "0.0.0-development",
   "description": "ruler.js typescript libraries",
   "keywords": [
     "ruler.js",
@@ -34,6 +34,7 @@
     "test:prod": "npm run lint && npm run test -- --no-cache",
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "commit": "git-cz",
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
@@ -117,7 +118,7 @@
     "rollup-plugin-node-resolve": "^5.0.3",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.23.0",
-    "semantic-release": "^15.9.16",
+    "semantic-release": "^15.13.31",
     "shelljs": "^0.8.3",
     "travis-deploy-once": "^5.0.9",
     "ts-jest": "^24.0.2",
