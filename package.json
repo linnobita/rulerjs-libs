@@ -1,6 +1,6 @@
 {
   "name": "rulerjs-libs",
-  "version": "0.1.0-development",
+  "version": "1.0.0",
   "description": "ruler.js typescript libraries",
   "keywords": [
     "ruler.js",
