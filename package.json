@@ -1,6 +1,6 @@
 {
   "name": "rulerjs-libs",
-  "version": "0.0.0-development",
+  "version": "0.1.0-development",
   "description": "ruler.js typescript libraries",
   "keywords": [
     "ruler.js",
@@ -27,7 +27,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
     "link": "npm run build && npm run copy && cd dist && npm link",
-    "copy": "ncp src/ruler.scss dist/ruler.scss",
+    "copy": "ncp src/rulerjs-libs.scss dist/rulerjs-libs.scss",
     "start": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
@@ -38,7 +38,8 @@
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once",
+    "prepublish": "npm run build && npm run copy"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
