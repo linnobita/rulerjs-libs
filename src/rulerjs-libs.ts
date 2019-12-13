@@ -1,6 +1,9 @@
 import { Ruler, GuideLine, Corner, IOptions, Options, GuideLineInfo } from './models'
 import * as UTILS from './utils'
 
+export * from './utils'
+export * from './models'
+
 export class RulerjsLib {
   public rulers: Array<Ruler>
   public guides: Array<GuideLine>
